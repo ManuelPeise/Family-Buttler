@@ -1,0 +1,17 @@
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\bin\Debug\net5.0\Service.I18n.deps.json
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\bin\Debug\net5.0\Service.I18n.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\bin\Debug\net5.0\ref\Service.I18n.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\bin\Debug\net5.0\Service.I18n.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\bin\Debug\net5.0\BusinessLogic.I18n.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\bin\Debug\net5.0\Shared.Models.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\bin\Debug\net5.0\BusinessLogic.I18n.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\bin\Debug\net5.0\Shared.Models.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\obj\Debug\net5.0\Service.I18n.csproj.AssemblyReference.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\obj\Debug\net5.0\Service.I18n.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\obj\Debug\net5.0\Service.I18n.AssemblyInfoInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\obj\Debug\net5.0\Service.I18n.AssemblyInfo.cs
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\obj\Debug\net5.0\Service.I18n.csproj.CoreCompileInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\obj\Debug\net5.0\Service.I18n.csproj.CopyComplete
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\obj\Debug\net5.0\Service.I18n.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\obj\Debug\net5.0\ref\Service.I18n.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.I18n\obj\Debug\net5.0\Service.I18n.pdb

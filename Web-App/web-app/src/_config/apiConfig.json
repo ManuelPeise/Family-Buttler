@@ -1,0 +1,11 @@
+{
+    "baseUrl" : "https://localhost:44321/api/",
+    "addPort" : "44322",
+    "api-key": "",
+    "i18nController" : "I18n/GetValues/",
+    "cookingBook":{
+        "getMenuCollection" : "menu/getmenucollection",
+        "addOrUpdateRecipe" : "menu/addorupdatemenu"
+    }
+    
+}

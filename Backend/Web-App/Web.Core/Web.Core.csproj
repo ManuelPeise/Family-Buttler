@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic.Repositories\BusinessLogic.Repositories.csproj" />
+    <ProjectReference Include="..\Data.CookingBookContext\Data.CookingBookContext.csproj" />
+    <ProjectReference Include="..\Data.LoggingContext\Data.LoggingContext.csproj" />
+    <ProjectReference Include="..\Service.Administration\Service.Administration.csproj" />
+    <ProjectReference Include="..\Service.CookingBook\Service.CookingBook.csproj" />
+    <ProjectReference Include="..\Service.Data\Service.Data.csproj" />
+    <ProjectReference Include="..\Service.I18n\Service.I18n.csproj" />
+    <ProjectReference Include="..\Shared.Wrappers\Shared.Wrappers.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

@@ -1,0 +1,15 @@
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\bin\Debug\net5.0\Service.CookingBook.deps.json
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\bin\Debug\net5.0\Service.CookingBook.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\bin\Debug\net5.0\ref\Service.CookingBook.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\bin\Debug\net5.0\Service.CookingBook.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\bin\Debug\net5.0\Shared.Models.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\bin\Debug\net5.0\Shared.Models.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Debug\net5.0\Service.CookingBook.csproj.AssemblyReference.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Debug\net5.0\Service.CookingBook.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Debug\net5.0\Service.CookingBook.AssemblyInfoInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Debug\net5.0\Service.CookingBook.AssemblyInfo.cs
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Debug\net5.0\Service.CookingBook.csproj.CoreCompileInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Debug\net5.0\Service.CookingBook.csproj.CopyComplete
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Debug\net5.0\Service.CookingBook.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Debug\net5.0\ref\Service.CookingBook.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Debug\net5.0\Service.CookingBook.pdb
