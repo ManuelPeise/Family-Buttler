@@ -1,6 +1,5 @@
 {
-    "baseUrl" : "https://localhost:44321/api/",
-    "addPort" : "44322",
+    "baseUrl" : "http://familybuttler:80/api/",
     "api-key": "",
     "i18nController" : "I18n/GetValues/",
     "cookingBook":{
