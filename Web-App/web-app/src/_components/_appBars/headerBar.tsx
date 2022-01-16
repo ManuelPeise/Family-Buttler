@@ -47,12 +47,12 @@ const HeaderBar: React.FC = () =>{
                     </IconButton>
                     <Tooltip title = 'Home'>
                         <Link style={{textDecoration: 'none', color:'white'}} to = "/" onClick={onHomeClick}>
-                            <Typography variant="h6" component="div" >
+                            <Typography style = {{fontSize:'1rem'}} variant="h6" component="div" >
                                 Family Buttler
                             </Typography>
                         </Link>
                     </Tooltip>
-                    <Typography style = {{marginLeft: '2vw'}} variant="h6" component="div" >
+                    <Typography style = {{marginLeft: '2vw', fontSize:'1rem'}} variant="h6" component="div" >
                                 {title}
                     </Typography>
                 </Toolbar>
