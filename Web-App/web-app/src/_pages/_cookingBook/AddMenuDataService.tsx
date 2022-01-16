@@ -2,7 +2,7 @@ import React from 'react'
 import useApi from '../../_hooks/useApi'
 import { IMenu, IMenuResponse } from '../../_interfaces/IMenu'
 import apiConfig from '../../_config/apiConfig.json'
-import { SetMenuCollection, SetPageTitle } from '../../_redux/_appStateStore/appStoreAccessor'
+import { SetMenuCollection } from '../../_redux/_appStateStore/appStoreAccessor'
 import { useDispatch } from 'react-redux'
 import MenuLayout from './MenuLayout'
 import { IMenuLayoutConfig } from './interfaces/IMenueLayoutConfig'
@@ -50,7 +50,7 @@ const AddMenuDataService: React.FC= () =>{
     }
 
     dispatch(SetMenuCollection(menuDataService.items[0]?.menuCollection))
-    dispatch(SetPageTitle(valueDataService.items[0].pageTitleAdd))
+    
     return component
 }
 

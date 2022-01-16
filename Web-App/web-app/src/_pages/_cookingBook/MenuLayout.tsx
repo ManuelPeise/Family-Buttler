@@ -8,7 +8,7 @@ import { IAutocompleteItem } from '../../_interfaces/IAutocompleteItem'
 import { MenuTypeEnum } from '../../_enums/menuEnums'
 import { ICookingBookValues } from '../../_interfaces/ICookingBookValues'
 import { useDispatch } from 'react-redux'
-import { SetMenu, SetOriginalMenu } from '../../_redux/_appStateStore/appStoreAccessor'
+import { SetMenu, SetOriginalMenu, SetPageTitle } from '../../_redux/_appStateStore/appStoreAccessor'
 
 
 interface IProps{
@@ -22,6 +22,18 @@ const MenuLayout: React.FC<IProps> = (props) => {
 
     const {layoutConfig, menuCollection, values, handleSave} = props
     const dispatch = useDispatch();
+
+    if(layoutConfig.componentKey === 'add'){
+        dispatch(SetPageTitle(values.pageTitleAdd))
+    }
+
+    if(layoutConfig.componentKey === 'edit'){
+        dispatch(SetPageTitle(values.pageTitleEdit))
+    }
+
+    if(layoutConfig.componentKey === 'view'){
+        dispatch(SetPageTitle(values.pageTitleView))
+    }
 
     const [menuType, setMenuType] = React.useState<number>(MenuTypeEnum.None)
 
