@@ -39,7 +39,7 @@ namespace BusinessLogic.Repositories
                                                          select new MenuIngredient
                                                          {
                                                              Id = i.Id,
-                                                             Name = CookingContext.Ingredients.Single(x => x.Id == i.Id).Name,
+                                                             Name = CookingContext.Ingredients.Single(x => x.Id == i.IngredientId).Name,
                                                              Amount = i.Amount,
                                                              Unit = i.Unit
                                                          }).ToList()
@@ -108,8 +108,6 @@ namespace BusinessLogic.Repositories
                 await CookingContext.SaveChangesAsync();
 
                 var maxMenuId = CookingContext.Menus.Max(x => x.Id);
-
-                var menuId = CookingContext.Menus.FirstOrDefault(menu => menu.Id == maxMenuId);
 
                 await TryAddOrUpdateMenuIngredients(importModel, maxMenuId);
 
@@ -213,7 +211,7 @@ namespace BusinessLogic.Repositories
                         Amount = ingredient.Amount,
                         Unit = ingredient.Unit,
                         MenuId = menuId,
-                        IngredientId = CookingContext.Ingredients.Single(ing => ing.Name.Equals(ingredient.Name)).Id,
+                        IngredientId = ingredientId,
                     };
 
                     CookingContext.MenuIngredients.Add(newIngrdient);

@@ -10,7 +10,7 @@ import { IMenuLayoutConfig } from './interfaces/IMenueLayoutConfig'
 import ImageInput from '../../_components/_inputs/ImageInput'
 import noImg from '../../img/no-pic.png'
 import { useDispatch, useSelector } from 'react-redux'
-import { IAppState } from '../../_interfaces/IAppState'
+import { IAppState, ICookingBookState } from '../../_interfaces/IAppState'
 import { SetMenu } from '../../_redux/_appStateStore/appStoreAccessor'
 
 interface IProps{
@@ -24,14 +24,9 @@ const MenuContainer: React.FC<IProps> = (props) =>{
 
     const {values, config, menuCollection, handleSave} = props
 
-    const menu = useSelector<IAppState, IMenu>(state => state.menu)
+    const cookkingbookState = useSelector<IAppState, ICookingBookState>(state => state.cookingBook)
 
     const dispatch = useDispatch();
-
-    // maybe set original state to redux
-    const original = React.useMemo(() =>{
-        return menu
-    },[menu])
 
     const existingMenuNames = React.useMemo(() =>{
         return menuCollection.map((menu) =>{
@@ -40,32 +35,17 @@ const MenuContainer: React.FC<IProps> = (props) =>{
     },[menuCollection])
 
     const menuNameAlreadyExists = React.useMemo(() =>{
-        return existingMenuNames.findIndex(x => x.normalize() === menu?.name?.toLocaleLowerCase().normalize()) !== -1
-    },[menu.name, existingMenuNames])
+        return existingMenuNames.findIndex(x => x.normalize() === cookkingbookState.selectedMenu?.name?.toLocaleLowerCase().normalize()) !== -1
+    },[cookkingbookState.selectedMenu.name, existingMenuNames])
 
     const isValidMenu = React.useMemo(() =>{
         return(
-            menu.name !== "" && menuNameAlreadyExists === false
-            && menu.description !== ""
-            && menu.menuType !== MenuTypeEnum.None
-            && menu?.ingredients?.length > 0
+            cookkingbookState.selectedMenu?.name !== "" && menuNameAlreadyExists === false
+            && cookkingbookState.selectedMenu?.description !== ""
+            && cookkingbookState.selectedMenu?.menuType !== MenuTypeEnum.None
+            && cookkingbookState.selectedMenu?.ingredients?.length > 0
         )
-    },[menu, menuNameAlreadyExists])
-
-    const isEqualIngrdient = (original: IIngredient, modified: IIngredient) => {
-        return original?.amount === modified?.amount && original?.name === modified?.name && original?.unit === modified?.unit
-    } 
-
-    const ingredientsEqual = React.useCallback(() =>{
-        
-        const equal = original?.ingredients?.map((ingredient, index) =>{
-
-            return isEqualIngrdient(ingredient, menu?.ingredients[index])
-        })
-        
-        return equal?.filter(x => x === true)?.length === original?.ingredients?.length
-
-    },[original?.ingredients, menu?.ingredients])
+    },[cookkingbookState.selectedMenu, menuNameAlreadyExists])
 
     const disabled = React.useMemo(() =>{
         if(config.componentKey === 'add'){
@@ -74,59 +54,53 @@ const MenuContainer: React.FC<IProps> = (props) =>{
     
         if(config.componentKey === 'edit'){
 
-            console.log(original)
-            if(menu?.name === undefined){
+            if(cookkingbookState.selectedMenu?.name === undefined){
                 return true
             }
 
-            return (
-            menu.description === original.description)
-            // || menu.howTo !== original.howTo
-            // || menu.menuType !== original.menuType
-            // || menu.ingredients.length < original.ingredients.length
-            // || menu.ingredients.length > original.ingredients.length)
+            return (cookkingbookState.selectedMenu === cookkingbookState.originalMenu)
         }
 
         return true
        
-    },[config, menu, original, ingredientsEqual, isValidMenu])
+    },[config, cookkingbookState, isValidMenu])
 
     const onTitleChanged = React.useCallback((name: string) =>{
-        const data: IMenu = {...menu, name}
+        const data: IMenu = {...cookkingbookState.selectedMenu,  name: name}
        
         dispatch(SetMenu(data))
-    },[menu, dispatch])
+    },[cookkingbookState.selectedMenu, dispatch])
 
     const onDescriptionChanged = React.useCallback((description: string) =>{
-        const data: IMenu = {...menu, description}
+        const data: IMenu = {...cookkingbookState.selectedMenu, description}
         dispatch(SetMenu(data))
-    },[menu, dispatch])
+    },[cookkingbookState.selectedMenu, dispatch])
 
     const onHowToChanged = React.useCallback((howTo: string) =>{
-        const data: IMenu = {...menu, howTo}
+        const data: IMenu = {...cookkingbookState.selectedMenu, howTo}
         dispatch(SetMenu(data))
-    },[menu, dispatch])
+    },[cookkingbookState.selectedMenu, dispatch])
 
     const onMenuTypeChanged = React.useCallback((value: number) =>{
-        const data: IMenu = {...menu, menuType: value}
+        const data: IMenu = {...cookkingbookState.selectedMenu, menuType: value}
         dispatch(SetMenu(data))
-    },[menu, dispatch])
+    },[cookkingbookState.selectedMenu, dispatch])
 
     const onIngredientChanged = React.useCallback((ingredients: IIngredient[]) =>{
-        dispatch(SetMenu({...menu, ingredients: ingredients}))
-    },[menu, dispatch])
+        dispatch(SetMenu({...cookkingbookState.selectedMenu, ingredients: ingredients}))
+    },[cookkingbookState.selectedMenu, dispatch])
 
     const menuTypes = React.useMemo(() => {
         const elements = [] as JSX.Element[]
 
-        elements.push(<MenuItem key={-1} id ='-1' value={-1} selected={menu.menuType === MenuTypeEnum.None}>{values.select}</MenuItem>)
-        elements.push(<MenuItem key={0} id = '0' value={0} selected={menu.menuType === MenuTypeEnum.Pasta}>{values.recipePasta}</MenuItem>)
-        elements.push(<MenuItem key={1} id = '1' value={1} selected={menu.menuType === MenuTypeEnum.Meat}>{values.recipeMeat}</MenuItem>)
-        elements.push(<MenuItem key={2} id = '2' value={2} selected={menu.menuType === MenuTypeEnum.Soup}>{values.recipeSoup}</MenuItem>)
-        elements.push(<MenuItem key={3} id = '3' value={3} selected={menu.menuType === MenuTypeEnum.Pastries}>{values.recipePastries}</MenuItem>)
+        elements.push(<MenuItem key={-1} id ='-1' value={-1} selected={cookkingbookState.selectedMenu.menuType === MenuTypeEnum.None}>{values.select}</MenuItem>)
+        elements.push(<MenuItem key={0} id = '0' value={0} selected={cookkingbookState.selectedMenu.menuType === MenuTypeEnum.Pasta}>{values.recipePasta}</MenuItem>)
+        elements.push(<MenuItem key={1} id = '1' value={1} selected={cookkingbookState.selectedMenu.menuType === MenuTypeEnum.Meat}>{values.recipeMeat}</MenuItem>)
+        elements.push(<MenuItem key={2} id = '2' value={2} selected={cookkingbookState.selectedMenu.menuType === MenuTypeEnum.Soup}>{values.recipeSoup}</MenuItem>)
+        elements.push(<MenuItem key={3} id = '3' value={3} selected={cookkingbookState.selectedMenu.menuType === MenuTypeEnum.Pastries}>{values.recipePastries}</MenuItem>)
 
         return elements
-    },[menu.menuType, values])
+    },[cookkingbookState.selectedMenu.menuType, values])
 
     const unitTypes = React.useMemo(() => {
         const elements = [] as JSX.Element[]
@@ -144,21 +118,23 @@ const MenuContainer: React.FC<IProps> = (props) =>{
     },[values])
 
     const handleAddIngredient = React.useCallback(() => {
-        const update: IMenu = {...menu, ingredients: menu.ingredients?? [] as IIngredient[]}
+        const update: IMenu = {...cookkingbookState.selectedMenu, ingredients: cookkingbookState.selectedMenu.ingredients?? [] as IIngredient[]}
         
-        update.ingredients.push({id: menu?.ingredients?.length} as IIngredient)
+        update.ingredients.push({id: cookkingbookState.selectedMenu?.ingredients?.length} as IIngredient)
         dispatch(SetMenu(update))
 
-    },[menu, dispatch])
+    },[cookkingbookState.selectedMenu, dispatch])
 
     const onCancel = React.useCallback(() =>{
-        dispatch(SetMenu({...original, ingredients: original?.ingredients?.filter(x => x.id !== -1)}))
-    },[original, dispatch])
+        dispatch(SetMenu(cookkingbookState.originalMenu))
+    },[cookkingbookState, dispatch])
 
     const onSave = React.useCallback(async () => {
-        await handleSave(menu)
-        dispatch(SetMenu({} as IMenu))
-    },[menu, handleSave, dispatch])
+        await handleSave(cookkingbookState.selectedMenu).then(() =>{
+            dispatch(SetMenu({} as IMenu))
+        })
+        
+    },[cookkingbookState, handleSave, dispatch])
 
     return(
         <Grid
@@ -178,7 +154,7 @@ const MenuContainer: React.FC<IProps> = (props) =>{
                     item>
                         <MenuInputComponent
                                     label={values.name}
-                                    value={menu?.name?? ""}
+                                    value={cookkingbookState.selectedMenu?.name?? ""}
                                     fullWidth={true} 
                                     isReadonly={config.isReadOnly && (config.componentKey === 'view' || config.componentKey === 'edit')}
                                     hasError={menuNameAlreadyExists && config.componentKey === 'add'}
@@ -189,7 +165,7 @@ const MenuContainer: React.FC<IProps> = (props) =>{
                                     isMultiRow={true}
                                     maxRows={5}
                                     fullWidth={true} 
-                                    value={menu?.description?? ""} 
+                                    value={cookkingbookState.selectedMenu?.description?? ""} 
                                     isReadonly={config.isReadOnly}
                                     onValueChanged={onDescriptionChanged}/>
                         <MenuInputComponent
@@ -197,7 +173,7 @@ const MenuContainer: React.FC<IProps> = (props) =>{
                                     isMultiRow={true}
                                     maxRows={20}
                                     fullWidth={true} 
-                                    value={menu?.howTo?? ""} 
+                                    value={cookkingbookState.selectedMenu?.howTo?? ""} 
                                     isReadonly={config.isReadOnly}
                                     onValueChanged={onHowToChanged}/>
                         <MenuInputComponent
@@ -205,7 +181,7 @@ const MenuContainer: React.FC<IProps> = (props) =>{
                                     isMultiRow={true}
                                     maxRows={5}
                                     fullWidth={true} 
-                                    value={menu.menuType ?? -1} 
+                                    value={cookkingbookState.selectedMenu?.menuType ?? -1} 
                                     isReadonly={config.isReadOnly}
                                     hasSelect={true}
                                     selectElements={menuTypes}
@@ -220,7 +196,7 @@ const MenuContainer: React.FC<IProps> = (props) =>{
                         width={200}
                         height={200}
                         noImageSrc={noImg}
-                        menu={menu}
+                        menu={cookkingbookState.selectedMenu}
                     />
 
                 </Grid>
@@ -231,7 +207,7 @@ const MenuContainer: React.FC<IProps> = (props) =>{
                     <IngrdientList
                         title={values.addIngredient} 
                         values={values} 
-                        ingredients={menu.ingredients}
+                        ingredients={cookkingbookState.selectedMenu.ingredients}
                         unitTypes={unitTypes}
                         isReadOnly= {config.isReadOnly}
                         onIngredientsChanged={onIngredientChanged}

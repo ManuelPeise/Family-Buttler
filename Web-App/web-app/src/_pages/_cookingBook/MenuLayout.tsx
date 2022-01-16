@@ -8,7 +8,7 @@ import { IAutocompleteItem } from '../../_interfaces/IAutocompleteItem'
 import { MenuTypeEnum } from '../../_enums/menuEnums'
 import { ICookingBookValues } from '../../_interfaces/ICookingBookValues'
 import { useDispatch } from 'react-redux'
-import { SetMenu } from '../../_redux/_appStateStore/appStoreAccessor'
+import { SetMenu, SetOriginalMenu } from '../../_redux/_appStateStore/appStoreAccessor'
 
 
 interface IProps{
@@ -28,6 +28,7 @@ const MenuLayout: React.FC<IProps> = (props) => {
     const handleMenuSelect = React.useCallback((id: number | null) =>{
         if(id !== null)
         dispatch(SetMenu(menuCollection?.find(menu => menu.id === id) ?? {} as IMenu))
+        dispatch(SetOriginalMenu(menuCollection?.find(menu => menu.id === id) ?? {} as IMenu))
     },[menuCollection, dispatch])
 
     const onMenuTypeChange = React.useCallback((menuType: number) =>{
@@ -53,6 +54,8 @@ const MenuLayout: React.FC<IProps> = (props) => {
             
     },[filteredMenus])
 
+    dispatch(SetMenu({} as IMenu))
+    
     return(
             <Grid
                 container

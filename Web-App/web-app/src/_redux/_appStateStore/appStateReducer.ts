@@ -5,8 +5,7 @@ import {AppStateActionTypes, ActionType} from './actionTypes'
 const initialState: IAppState = {
     pageTitle: "Home",
     url: "/",
-    menuCollection: [] as IMenu[],
-    menu: {} as IMenu
+    cookingBook: {menuCollection: [], selectedMenu: {} as IMenu, originalMenu: {} as IMenu}
 }
 
 const appStateReducer = (state = initialState, action: ActionType): IAppState =>{
@@ -24,12 +23,17 @@ const appStateReducer = (state = initialState, action: ActionType): IAppState =>
         case AppStateActionTypes.SETMENUCOLLECTION:
             return{
                 ...state,
-                menuCollection: action.payload
+                cookingBook: {...state.cookingBook, menuCollection: action.payload}
             }
         case AppStateActionTypes.SETMENU:
             return{
                 ...state,
-                menu: action.payload
+                cookingBook: {...state.cookingBook, selectedMenu: action.payload}
+            }
+        case AppStateActionTypes.SETORIGINALMENU:
+            return{
+                ...state,
+                cookingBook: {...state.cookingBook, originalMenu: action.payload}
             }
         default: return state
         }

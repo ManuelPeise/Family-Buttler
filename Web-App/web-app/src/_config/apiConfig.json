@@ -1,6 +1,6 @@
 {
     "baseUrl" : "https://localhost:5001/api/",
-    "baseUriBackup": "familybuttler:443",
+    "baseUriBackup": "localhost:5001",
     "api-key": "",
     "i18nController" : "I18n/GetValues/",
     "cookingBook":{

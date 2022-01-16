@@ -25,7 +25,7 @@ const EditMenuDataService: React.FC= () =>{
     },[menuDataService])
 
     const component = React.useMemo(() =>{
-       
+
         const config: IMenuLayoutConfig = {
             isReadOnly: false, 
             hasFilter: true, 
@@ -49,9 +49,11 @@ const EditMenuDataService: React.FC= () =>{
     if(valueDataService.items[0] === null || valueDataService.items[0] === undefined){
         return null
     }
-
+    
     dispatch(SetMenuCollection(menuDataService.items[0]?.menuCollection))
     dispatch(SetPageTitle(valueDataService.items[0].pageTitleEdit))
+   
+    
     return component
 }
 

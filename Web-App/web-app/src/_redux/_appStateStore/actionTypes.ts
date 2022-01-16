@@ -4,7 +4,8 @@ export enum AppStateActionTypes{
     'SETPAGETITLE' = 0,
     'SETPAGEURL' = 1,
     'SETMENUCOLLECTION' = 2,
-    'SETMENU' = 3
+    'SETMENU' = 3,
+    'SETORIGINALMENU' = 4
 }
 
 export type Set_PageTitle = {
@@ -27,5 +28,9 @@ export type Set_Menu = {
     payload: IMenu
 }
 
-export type ActionType = Set_PageTitle | Set_PageUrl | Set_Menu_Collection | Set_Menu
+export type Set_Original_Menu = {
+    type: typeof AppStateActionTypes.SETORIGINALMENU,
+    payload: IMenu
+}
+export type ActionType = Set_PageTitle | Set_PageUrl | Set_Menu_Collection | Set_Menu | Set_Original_Menu
 

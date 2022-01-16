@@ -30,11 +30,17 @@ export const SetMenu = (menu: IMenu): ActionType =>{
     }
 }
 
+export const SetOriginalMenu = (menu: IMenu): ActionType =>{
+    return{
+        type: AppStateActionTypes.SETORIGINALMENU,
+        payload: menu
+    }
+}
+
 export const mapStateToProps = (state: IAppState): IAppState =>{
     return{
         pageTitle: state.pageTitle,
         url: state.url,
-        menuCollection: state.menuCollection,
-        menu: state.menu
+       cookingBook: state.cookingBook
     }
 }

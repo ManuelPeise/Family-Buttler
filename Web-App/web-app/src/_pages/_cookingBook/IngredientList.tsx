@@ -23,6 +23,7 @@ const IngrdientList: React.FC<IProps> = (props) => {
     const {ingredients, isReadOnly, values, unitTypes, title, onIngredientsChanged, handleAddIngredient} = props
 
     const onIngredientChanged = React.useCallback((ingredient: IIngredient) =>{
+        console.log(ingredient)
         const copy = ingredients?.slice()
         const index = copy?.findIndex(x => x.id === ingredient.id)
         copy[index] = ingredient
