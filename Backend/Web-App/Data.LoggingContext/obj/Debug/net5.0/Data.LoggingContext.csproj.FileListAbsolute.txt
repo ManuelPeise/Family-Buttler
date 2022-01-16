@@ -1,0 +1,15 @@
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\bin\Debug\net5.0\Data.LoggingContext.deps.json
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\bin\Debug\net5.0\Data.LoggingContext.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\bin\Debug\net5.0\ref\Data.LoggingContext.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\bin\Debug\net5.0\Data.LoggingContext.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\bin\Debug\net5.0\Shared.Models.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\bin\Debug\net5.0\Shared.Models.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\obj\Debug\net5.0\Data.LoggingContext.csproj.AssemblyReference.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\obj\Debug\net5.0\Data.LoggingContext.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\obj\Debug\net5.0\Data.LoggingContext.AssemblyInfoInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\obj\Debug\net5.0\Data.LoggingContext.AssemblyInfo.cs
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\obj\Debug\net5.0\Data.LoggingContext.csproj.CoreCompileInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\obj\Debug\net5.0\Data.LoggingContext.csproj.CopyComplete
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\obj\Debug\net5.0\Data.LoggingContext.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\obj\Debug\net5.0\ref\Data.LoggingContext.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.LoggingContext\obj\Debug\net5.0\Data.LoggingContext.pdb

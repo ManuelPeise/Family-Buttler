@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "P2s+nA45k0dvufnbbfcXZZ+cBOhbAx9FP2t0+suRPfnue3SfyydraKjhVeYiPP56RqEo/CABcUQXsLJpepbeiA==",
+  "success": true,
+  "projectFilePath": "D:\\Development\\WorkFolder\\FamilyButtler\\Family-Buttler\\Backend\\Web-App\\BusinessLogic.I18n\\BusinessLogic.I18n.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\manue\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.13\\microsoft.aspnetcore.http.features.5.0.13.nupkg.sha512",
+    "C:\\Users\\manue\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\manue\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\manue\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

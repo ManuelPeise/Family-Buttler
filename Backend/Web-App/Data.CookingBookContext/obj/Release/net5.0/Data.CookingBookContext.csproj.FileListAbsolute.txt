@@ -1,0 +1,15 @@
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\bin\Release\net5.0\Data.CookingBookContext.deps.json
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\bin\Release\net5.0\Data.CookingBookContext.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\bin\Release\net5.0\ref\Data.CookingBookContext.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\bin\Release\net5.0\Data.CookingBookContext.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\bin\Release\net5.0\Shared.Models.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\bin\Release\net5.0\Shared.Models.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.AssemblyInfoInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.AssemblyInfo.cs
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.csproj.CoreCompileInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.csproj.CopyComplete
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\ref\Data.CookingBookContext.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.csproj.AssemblyReference.cache

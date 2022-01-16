@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Publish\CookingBookBackend</_PublishTargetUrl>
+    <History>True|2022-01-13T20:27:36.9595426Z;True|2022-01-13T20:39:27.2152915+01:00;True|2022-01-09T21:40:01.9325404+01:00;False|2022-01-09T21:39:08.9175668+01:00;True|2022-01-09T21:21:12.5984321+01:00;True|2022-01-09T20:46:55.5689956+01:00;True|2022-01-09T15:21:01.8140558+01:00;True|2022-01-09T15:17:36.0969091+01:00;True|2022-01-06T21:55:51.6169140+01:00;True|2022-01-06T21:53:19.4757571+01:00;True|2022-01-06T21:07:04.0511450+01:00;True|2021-12-27T12:33:24.7208369+01:00;True|2021-12-27T12:23:42.9973417+01:00;False|2021-12-27T12:23:11.3136608+01:00;True|2021-12-27T12:17:45.9743343+01:00;False|2021-12-27T12:16:44.3527586+01:00;True|2021-12-27T12:00:00.5386969+01:00;True|2021-12-26T21:15:33.3474113+01:00;True|2021-12-26T20:36:10.4500474+01:00;True|2021-12-26T20:31:24.7679669+01:00;True|2021-12-26T20:16:32.0571015+01:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="CookingBookContext">
+      <Value>Server=127.0.0.1%3bDatabase=DevLogContext%3bUser=root%3bPassword=root</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="LogContext">
+      <Value>Server=127.0.0.1%3bDatabase=DevLogContext%3bUser=root%3bPassword=root</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Data.CookingBookContext.CookingContext">
+      <Value>Server=127.0.0.1%3bDatabase=DevLogContext%3bUser=root%3bPassword=root</Value>
+    </EFMigrations>
+    <EFMigrations Include="Data.LoggingContext.LogContext">
+      <Value>Server=127.0.0.1%3bDatabase=DevLogContext%3bUser=root%3bPassword=root</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
