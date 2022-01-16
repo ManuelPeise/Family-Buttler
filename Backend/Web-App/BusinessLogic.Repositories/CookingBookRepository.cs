@@ -34,6 +34,7 @@ namespace BusinessLogic.Repositories
                                           Description = menu.Description,
                                           HowTo = menu.HowTo,
                                           MenuType = menu.Type,
+                                          Image = menu.Image,
                                           Ingredients = (from i in ingredients
                                                          select new MenuIngredient
                                                          {
@@ -96,7 +97,9 @@ namespace BusinessLogic.Repositories
                     Name = importModel.Name,
                     Description = importModel.Description,
                     HowTo = importModel.HowTo,
-                    Type = importModel.MenuType
+                    Type = importModel.MenuType,
+                    Image = importModel.Image
+                    
                 };
 
                 CookingContext.Menus.Add(newMenu);

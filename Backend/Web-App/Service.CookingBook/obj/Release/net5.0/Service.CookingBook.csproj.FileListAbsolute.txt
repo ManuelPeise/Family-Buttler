@@ -13,3 +13,5 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.C
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Release\net5.0\Service.CookingBook.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Release\net5.0\ref\Service.CookingBook.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\obj\Release\net5.0\Service.CookingBook.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\bin\Release\net5.0\BusinessLogic.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.CookingBook\bin\Release\net5.0\BusinessLogic.Data.pdb

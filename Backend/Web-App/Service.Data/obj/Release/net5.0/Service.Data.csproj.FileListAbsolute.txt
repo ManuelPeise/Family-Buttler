@@ -13,3 +13,5 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.D
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\Service.Data.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\ref\Service.Data.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\Service.Data.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\bin\Release\net5.0\BusinessLogic.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\bin\Release\net5.0\BusinessLogic.Data.pdb

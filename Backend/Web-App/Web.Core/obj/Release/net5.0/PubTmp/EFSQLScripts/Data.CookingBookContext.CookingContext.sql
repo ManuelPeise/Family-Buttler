@@ -48,3 +48,18 @@ END;
 
 COMMIT;
 
+START TRANSACTION;
+
+IF NOT EXISTS(SELECT * FROM `__EFMigrationsHistory` WHERE `MigrationId` = '20220110212343_add-image')
+BEGIN
+    ALTER TABLE `Menus` ADD `Image` longText NULL;
+END;
+
+IF NOT EXISTS(SELECT * FROM `__EFMigrationsHistory` WHERE `MigrationId` = '20220110212343_add-image')
+BEGIN
+    INSERT INTO `__EFMigrationsHistory` (`MigrationId`, `ProductVersion`)
+    VALUES ('20220110212343_add-image', '5.0.13');
+END;
+
+COMMIT;
+

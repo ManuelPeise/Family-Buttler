@@ -10,6 +10,7 @@ namespace Shared.Models.ImportModels
         public MenuType MenuType { get; set; }
         public string Description { get; set; }
         public string HowTo { get; set; }
+        public string Image { get; set; }
         public List<IngedientImportModel> Ingredients { get; set; }
     }
 

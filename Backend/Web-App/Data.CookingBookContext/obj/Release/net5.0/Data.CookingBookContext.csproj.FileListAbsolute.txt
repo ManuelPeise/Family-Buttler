@@ -12,3 +12,4 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.Cook
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\ref\Data.CookingBookContext.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Data.CookingBookContext\obj\Release\net5.0\Data.CookingBookContext.csproj.AssemblyReference.cache

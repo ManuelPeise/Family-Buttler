@@ -7,9 +7,13 @@ import IngrdientList from './IngredientList'
 import SubHeaderBar from '../../_components/_appBars/subHeader'
 import { ICookingBookValues } from '../../_interfaces/ICookingBookValues'
 import { IMenuLayoutConfig } from './interfaces/IMenueLayoutConfig'
+import ImageInput from '../../_components/_inputs/ImageInput'
+import noImg from '../../img/no-pic.png'
+import { useDispatch, useSelector } from 'react-redux'
+import { IAppState } from '../../_interfaces/IAppState'
+import { SetMenu } from '../../_redux/_appStateStore/appStoreAccessor'
 
 interface IProps{
-    selectedMenu: IMenu
     values: ICookingBookValues
     config: IMenuLayoutConfig
     menuCollection: IMenu[]
@@ -18,17 +22,16 @@ interface IProps{
 
 const MenuContainer: React.FC<IProps> = (props) =>{
 
-    const {selectedMenu, values, config, menuCollection, handleSave} = props
+    const {values, config, menuCollection, handleSave} = props
 
-    const [menu, setMenu] = React.useState<IMenu>(selectedMenu?? {} as IMenu)
+    const menu = useSelector<IAppState, IMenu>(state => state.menu)
 
-    React.useEffect(() =>{
-        setMenu(selectedMenu)
-    },[config.componentKey, selectedMenu, setMenu])
+    const dispatch = useDispatch();
 
+    // maybe set original state to redux
     const original = React.useMemo(() =>{
-        return selectedMenu
-    },[selectedMenu])
+        return menu
+    },[menu])
 
     const existingMenuNames = React.useMemo(() =>{
         return menuCollection.map((menu) =>{
@@ -65,53 +68,53 @@ const MenuContainer: React.FC<IProps> = (props) =>{
     },[original?.ingredients, menu?.ingredients])
 
     const disabled = React.useMemo(() =>{
-
         if(config.componentKey === 'add'){
             return isValidMenu === false
         }
     
         if(config.componentKey === 'edit'){
 
-            if(selectedMenu?.name === undefined){
+            console.log(original)
+            if(menu?.name === undefined){
                 return true
             }
 
-            return (isValidMenu === false
-            && menu.description === selectedMenu.description
-            && menu.howTo === selectedMenu.howTo
-            && menu.menuType === selectedMenu.menuType
-            && menu.ingredients[menu?.ingredients?.length -1].id !== -1
-            && ingredientsEqual() === true)
+            return (
+            menu.description === original.description)
+            // || menu.howTo !== original.howTo
+            // || menu.menuType !== original.menuType
+            // || menu.ingredients.length < original.ingredients.length
+            // || menu.ingredients.length > original.ingredients.length)
         }
 
         return true
        
-    },[config, menu, selectedMenu, ingredientsEqual, isValidMenu])
+    },[config, menu, original, ingredientsEqual, isValidMenu])
 
     const onTitleChanged = React.useCallback((name: string) =>{
         const data: IMenu = {...menu, name}
        
-        setMenu(data)
-    },[menu])
+        dispatch(SetMenu(data))
+    },[menu, dispatch])
 
     const onDescriptionChanged = React.useCallback((description: string) =>{
         const data: IMenu = {...menu, description}
-        setMenu(data)
-    },[menu])
+        dispatch(SetMenu(data))
+    },[menu, dispatch])
 
     const onHowToChanged = React.useCallback((howTo: string) =>{
         const data: IMenu = {...menu, howTo}
-        setMenu(data)
-    },[menu])
+        dispatch(SetMenu(data))
+    },[menu, dispatch])
 
     const onMenuTypeChanged = React.useCallback((value: number) =>{
         const data: IMenu = {...menu, menuType: value}
-        setMenu(data)
-    },[menu])
+        dispatch(SetMenu(data))
+    },[menu, dispatch])
 
     const onIngredientChanged = React.useCallback((ingredients: IIngredient[]) =>{
-        setMenu({...menu, ingredients: ingredients})
-    },[menu, setMenu])
+        dispatch(SetMenu({...menu, ingredients: ingredients}))
+    },[menu, dispatch])
 
     const menuTypes = React.useMemo(() => {
         const elements = [] as JSX.Element[]
@@ -142,18 +145,20 @@ const MenuContainer: React.FC<IProps> = (props) =>{
 
     const handleAddIngredient = React.useCallback(() => {
         const update: IMenu = {...menu, ingredients: menu.ingredients?? [] as IIngredient[]}
-        update.ingredients.push({id: -1} as IIngredient)
-        setMenu(update)
+        
+        update.ingredients.push({id: menu?.ingredients?.length} as IIngredient)
+        dispatch(SetMenu(update))
 
-    },[menu, setMenu])
+    },[menu, dispatch])
 
     const onCancel = React.useCallback(() =>{
-        setMenu({...original, ingredients: original?.ingredients?.filter(x => x.id !== -1)})
-    },[original, setMenu])
+        dispatch(SetMenu({...original, ingredients: original?.ingredients?.filter(x => x.id !== -1)}))
+    },[original, dispatch])
 
     const onSave = React.useCallback(async () => {
         await handleSave(menu)
-    },[menu, handleSave])
+        dispatch(SetMenu({} as IMenu))
+    },[menu, handleSave, dispatch])
 
     return(
         <Grid
@@ -163,42 +168,62 @@ const MenuContainer: React.FC<IProps> = (props) =>{
             xs={11}
             xl={11}>
             <Grid
+                item
+                xs = {12}
                 container>
-                    <SubHeaderBar title={values.recipe} variant='h5'/>
-                    <MenuInputComponent
-                                label={values.name}
-                                value={menu?.name?? ""}
-                                fullWidth={true} 
-                                isReadonly={config.isReadOnly && (config.componentKey === 'view' || config.componentKey === 'edit')}
-                                hasError={menuNameAlreadyExists && config.componentKey === 'add'}
-                                errorText={menuNameAlreadyExists && config.componentKey === 'add' ? "Menu already exists!" : ""}
-                                onValueChanged={onTitleChanged} />
-                    <MenuInputComponent
-                                label={values.description}
-                                isMultiRow={true}
-                                maxRows={5}
-                                fullWidth={true} 
-                                value={menu?.description?? ""} 
-                                isReadonly={config.isReadOnly}
-                                onValueChanged={onDescriptionChanged}/>
-                    <MenuInputComponent
-                                label={values.hoTo}
-                                isMultiRow={true}
-                                maxRows={20}
-                                fullWidth={true} 
-                                value={menu?.howTo?? ""} 
-                                isReadonly={config.isReadOnly}
-                                onValueChanged={onHowToChanged}/>
-                    <MenuInputComponent
-                                label={values.menuType}
-                                isMultiRow={true}
-                                maxRows={5}
-                                fullWidth={true} 
-                                value={menu.menuType ?? -1} 
-                                isReadonly={config.isReadOnly}
-                                hasSelect={true}
-                                selectElements={menuTypes}
-                                onSelectChanged={onMenuTypeChanged}/>
+                <SubHeaderBar title={values.recipe} variant='h5'/>
+                <Grid
+                    xs={12}
+                    sm={8}
+                    item>
+                        <MenuInputComponent
+                                    label={values.name}
+                                    value={menu?.name?? ""}
+                                    fullWidth={true} 
+                                    isReadonly={config.isReadOnly && (config.componentKey === 'view' || config.componentKey === 'edit')}
+                                    hasError={menuNameAlreadyExists && config.componentKey === 'add'}
+                                    errorText={menuNameAlreadyExists && config.componentKey === 'add' ? "Menu already exists!" : ""}
+                                    onValueChanged={onTitleChanged} />
+                        <MenuInputComponent
+                                    label={values.description}
+                                    isMultiRow={true}
+                                    maxRows={5}
+                                    fullWidth={true} 
+                                    value={menu?.description?? ""} 
+                                    isReadonly={config.isReadOnly}
+                                    onValueChanged={onDescriptionChanged}/>
+                        <MenuInputComponent
+                                    label={values.hoTo}
+                                    isMultiRow={true}
+                                    maxRows={20}
+                                    fullWidth={true} 
+                                    value={menu?.howTo?? ""} 
+                                    isReadonly={config.isReadOnly}
+                                    onValueChanged={onHowToChanged}/>
+                        <MenuInputComponent
+                                    label={values.menuType}
+                                    isMultiRow={true}
+                                    maxRows={5}
+                                    fullWidth={true} 
+                                    value={menu.menuType ?? -1} 
+                                    isReadonly={config.isReadOnly}
+                                    hasSelect={true}
+                                    selectElements={menuTypes}
+                                    onSelectChanged={onMenuTypeChanged}/>
+                </Grid>
+                <Grid
+                    xs={12}
+                    sm={4}
+                    item>
+                    <ImageInput 
+                        isReadOnly={config.isReadOnly}
+                        width={200}
+                        height={200}
+                        noImageSrc={noImg}
+                        menu={menu}
+                    />
+
+                </Grid>
             </Grid>
             <Grid
                 item

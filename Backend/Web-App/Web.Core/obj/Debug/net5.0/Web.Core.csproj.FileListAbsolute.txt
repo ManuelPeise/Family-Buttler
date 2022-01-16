@@ -79,3 +79,13 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Debug\net5.0\ref\Web.Core.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Debug\net5.0\Web.Core.pdb
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Debug\net5.0\Web.Core.genruntimeconfig.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\Microsoft.Win32.SystemEvents.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\System.Drawing.Common.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\System.IO.Pipelines.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\BusinessLogic.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\BusinessLogic.Data.pdb

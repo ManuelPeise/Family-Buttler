@@ -45,6 +45,9 @@ namespace Data.CookingBookContext.Migrations
                     b.Property<string>("HowTo")
                         .HasColumnType("text");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("text");
+
                     b.Property<string>("Name")
                         .HasColumnType("text");
 

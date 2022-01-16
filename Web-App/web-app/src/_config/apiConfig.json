@@ -1,10 +1,12 @@
 {
-    "baseUrl" : "http://familybuttler:80/api/",
+    "baseUrl" : "https://localhost:5001/api/",
+    "baseUriBackup": "familybuttler:443",
     "api-key": "",
     "i18nController" : "I18n/GetValues/",
     "cookingBook":{
         "getMenuCollection" : "menu/getmenucollection",
-        "addOrUpdateRecipe" : "menu/addorupdatemenu"
+        "addOrUpdateRecipe" : "menu/addorupdatemenu",
+        "imageConverter":"imageconverter/convertimage"
     }
     
 }

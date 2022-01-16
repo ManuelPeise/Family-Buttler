@@ -23,10 +23,18 @@ export const SetMenuCollection = (collection: IMenu[]): ActionType =>{
     }
 }
 
+export const SetMenu = (menu: IMenu): ActionType =>{
+    return{
+        type: AppStateActionTypes.SETMENU,
+        payload: menu
+    }
+}
+
 export const mapStateToProps = (state: IAppState): IAppState =>{
     return{
         pageTitle: state.pageTitle,
         url: state.url,
-        menuCollection: state.menuCollection
+        menuCollection: state.menuCollection,
+        menu: state.menu
     }
 }

@@ -8,31 +8,21 @@ import MenuLayout from './MenuLayout'
 import { IMenuLayoutConfig } from './interfaces/IMenueLayoutConfig'
 import { ICookingBookValues } from '../../_interfaces/ICookingBookValues'
 
+
 const EditMenuDataService: React.FC= () =>{
 
     const dispatch = useDispatch();
-    
-    const [selectedMenuId, setSelectedMenuId] = React.useState<number>(0)
 
     const menuDataService = useApi<IMenuResponse>({serviceUri: apiConfig.baseUrl + apiConfig.cookingBook.getMenuCollection, params: null})
     
     const valueDataService = useApi<ICookingBookValues>({serviceUri: apiConfig.baseUrl + apiConfig.i18nController + "cookingbook_cookingbookEn", params: null}) 
     
-    const handleMenuSelect = React.useCallback((id: number | null) =>{
-        if(id !== null)
-        setSelectedMenuId(id)
-    },[setSelectedMenuId])
-
-    const selectedMenu = React.useMemo(() =>{
-        return menuDataService.items[0]?.menuCollection?.find(menu => menu.id === selectedMenuId) ?? {} as IMenu
-    },[selectedMenuId, menuDataService])
-    
     const saveOrUpdateRecipe = React.useCallback(async (menu: IMenu) =>{
         await menuDataService.post({serviceUri: apiConfig.baseUrl + apiConfig.cookingBook.addOrUpdateRecipe, method: 'POST', params: menu})
         .then(() =>{
-            setSelectedMenuId(0)
+          
         })
-    },[])
+    },[menuDataService])
 
     const component = React.useMemo(() =>{
        
@@ -40,19 +30,16 @@ const EditMenuDataService: React.FC= () =>{
             isReadOnly: false, 
             hasFilter: true, 
             hasMenuList: true,
-            selectedMenuId: selectedMenuId,
             componentKey: 'edit'
             }
                 
         return <MenuLayout 
                     layoutConfig={config} 
-                    selectedMenu={selectedMenu}
                     menuCollection={menuDataService.items[0]?.menuCollection?? []}
                     values={valueDataService.items[0]}
-                    handleSelectMenu={handleMenuSelect} 
                     handleSave={saveOrUpdateRecipe}/>
          
-    },[menuDataService.items, valueDataService.items, selectedMenuId, selectedMenu, handleMenuSelect, saveOrUpdateRecipe])
+    },[menuDataService.items, valueDataService.items, saveOrUpdateRecipe])
 
     if(menuDataService.items[0] === null){
 

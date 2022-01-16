@@ -11,6 +11,7 @@ export interface IMenu{
     description: string,
     howTo: string,
     menuType: MenuTypeEnum,
+    image: string
     ingredients: IIngredient[]
 }
 

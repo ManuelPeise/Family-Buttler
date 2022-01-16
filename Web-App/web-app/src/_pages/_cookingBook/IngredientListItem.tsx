@@ -36,7 +36,6 @@ const IngrdientListtem: React.FC<IProps> = (props) => {
     },[ingredient, onIngredientChanged])
 
     const handleNameChanged = React.useCallback((value: string) => {
-        console.log(value)
     
         onIngredientChanged({...ingredient, name: value})
     },[ingredient, onIngredientChanged])

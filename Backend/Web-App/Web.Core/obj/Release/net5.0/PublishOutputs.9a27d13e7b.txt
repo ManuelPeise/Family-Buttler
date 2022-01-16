@@ -15,6 +15,7 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\K4os.Hash.xxHash.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Http.Features.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.DotNet.PlatformAbstractions.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
@@ -24,7 +25,9 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.Identity.Stores.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.Primitives.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.OpenApi.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\MySql.Data.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Ubiety.Dns.Core.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\ZstdNet.dll
@@ -35,8 +38,14 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\System.Drawing.Common.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\System.IO.Pipelines.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\BusinessLogic.Data.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\BusinessLogic.I18n.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\BusinessLogic.Repositories.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\BusinessLogic.Shared.dll
@@ -56,6 +65,7 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Service.Data.pdb
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Service.I18n.pdb
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Shared.Wrappers.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\BusinessLogic.Data.pdb
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\BusinessLogic.I18n.pdb
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\BusinessLogic.Shared.pdb
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Shared.Models.pdb

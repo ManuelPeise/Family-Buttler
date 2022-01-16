@@ -1,0 +1,12 @@
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\bin\Release\net5.0\BusinessLogic.Data.deps.json
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\bin\Release\net5.0\BusinessLogic.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\bin\Release\net5.0\ref\BusinessLogic.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\bin\Release\net5.0\BusinessLogic.Data.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Release\net5.0\BusinessLogic.Data.csproj.AssemblyReference.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Release\net5.0\BusinessLogic.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Release\net5.0\BusinessLogic.Data.AssemblyInfoInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Release\net5.0\BusinessLogic.Data.AssemblyInfo.cs
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Release\net5.0\BusinessLogic.Data.csproj.CoreCompileInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Release\net5.0\BusinessLogic.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Release\net5.0\ref\BusinessLogic.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Release\net5.0\BusinessLogic.Data.pdb

@@ -14,7 +14,6 @@ namespace Shared.Models.Interfaces
         Task AddOrUpdateMenu(MenuImportModel importModel);
        
         Task DeleteMenu(int id);
-
         
     }
 }

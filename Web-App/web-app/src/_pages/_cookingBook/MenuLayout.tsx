@@ -7,22 +7,28 @@ import MenuContainer from './MenuContainer'
 import { IAutocompleteItem } from '../../_interfaces/IAutocompleteItem'
 import { MenuTypeEnum } from '../../_enums/menuEnums'
 import { ICookingBookValues } from '../../_interfaces/ICookingBookValues'
+import { useDispatch } from 'react-redux'
+import { SetMenu } from '../../_redux/_appStateStore/appStoreAccessor'
 
 
 interface IProps{
    layoutConfig: IMenuLayoutConfig
-   selectedMenu: IMenu
    menuCollection: IMenu[]
    values: ICookingBookValues
-   handleSelectMenu: (id: number | null) => void
    handleSave:(menu: IMenu) => Promise<void>
 }
 
 const MenuLayout: React.FC<IProps> = (props) => {
 
-    const {layoutConfig, menuCollection, selectedMenu, values, handleSelectMenu, handleSave} = props
-    
+    const {layoutConfig, menuCollection, values, handleSave} = props
+    const dispatch = useDispatch();
+
     const [menuType, setMenuType] = React.useState<number>(MenuTypeEnum.None)
+
+    const handleMenuSelect = React.useCallback((id: number | null) =>{
+        if(id !== null)
+        dispatch(SetMenu(menuCollection?.find(menu => menu.id === id) ?? {} as IMenu))
+    },[menuCollection, dispatch])
 
     const onMenuTypeChange = React.useCallback((menuType: number) =>{
         setMenuType(menuType)
@@ -65,7 +71,7 @@ const MenuLayout: React.FC<IProps> = (props) => {
                                 items={filterItems}
                                 selectedMenuType={menuType}
                                 values={values}
-                                onMenuSelect={handleSelectMenu}
+                                onMenuSelect={handleMenuSelect}
                                 onMenuTypeChange={onMenuTypeChange}/>
                         </Paper>
                     </Grid>
@@ -77,7 +83,6 @@ const MenuLayout: React.FC<IProps> = (props) => {
                         xl={11}>
                         <Paper style={{display:'flex', justifyContent:'center', padding:'1vw'}}>
                             <MenuContainer 
-                                selectedMenu={selectedMenu ?? {} as IMenu} 
                                 values={values}
                                 config={layoutConfig}
                                 menuCollection={filteredMenus}

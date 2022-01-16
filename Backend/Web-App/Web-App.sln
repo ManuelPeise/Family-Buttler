@@ -33,9 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Data", "Service.Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Wrappers", "Shared.Wrappers\Shared.Wrappers.csproj", "{E45CAC90-9FCC-496D-8860-622F2482A6F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.I18n", "Service.I18n\Service.I18n.csproj", "{5E8D08C8-A0F0-4AD8-BD4E-BE270986F950}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.I18n", "Service.I18n\Service.I18n.csproj", "{5E8D08C8-A0F0-4AD8-BD4E-BE270986F950}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic.I18n", "BusinessLogic.I18n\BusinessLogic.I18n.csproj", "{1894EA72-0D3E-4D91-B0B3-E7970749CCFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic.I18n", "BusinessLogic.I18n\BusinessLogic.I18n.csproj", "{1894EA72-0D3E-4D91-B0B3-E7970749CCFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic.Data", "BusinessLogic.Data\BusinessLogic.Data.csproj", "{1973152D-B7CE-437A-B116-A50EE46113C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,10 @@ Global
 		{1894EA72-0D3E-4D91-B0B3-E7970749CCFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1894EA72-0D3E-4D91-B0B3-E7970749CCFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1894EA72-0D3E-4D91-B0B3-E7970749CCFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1973152D-B7CE-437A-B116-A50EE46113C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1973152D-B7CE-437A-B116-A50EE46113C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1973152D-B7CE-437A-B116-A50EE46113C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1973152D-B7CE-437A-B116-A50EE46113C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +114,7 @@ Global
 		{E45CAC90-9FCC-496D-8860-622F2482A6F5} = {D2D9AE60-7713-4A68-B4B2-C9FD71FFCEA4}
 		{5E8D08C8-A0F0-4AD8-BD4E-BE270986F950} = {4C975835-A1C6-4663-9108-A00245686ACB}
 		{1894EA72-0D3E-4D91-B0B3-E7970749CCFF} = {FA75EDC9-0CC7-474D-BFAD-65FD8B7F3D8F}
+		{1973152D-B7CE-437A-B116-A50EE46113C1} = {FA75EDC9-0CC7-474D-BFAD-65FD8B7F3D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {519F36D4-7374-4B6E-B5B5-CA2E494C8B23}

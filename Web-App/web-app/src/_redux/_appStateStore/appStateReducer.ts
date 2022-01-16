@@ -5,7 +5,8 @@ import {AppStateActionTypes, ActionType} from './actionTypes'
 const initialState: IAppState = {
     pageTitle: "Home",
     url: "/",
-    menuCollection: [] as IMenu[]
+    menuCollection: [] as IMenu[],
+    menu: {} as IMenu
 }
 
 const appStateReducer = (state = initialState, action: ActionType): IAppState =>{
@@ -24,6 +25,11 @@ const appStateReducer = (state = initialState, action: ActionType): IAppState =>
             return{
                 ...state,
                 menuCollection: action.payload
+            }
+        case AppStateActionTypes.SETMENU:
+            return{
+                ...state,
+                menu: action.payload
             }
         default: return state
         }

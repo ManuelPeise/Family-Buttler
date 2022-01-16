@@ -15,6 +15,7 @@ namespace Shared.Models.ExportModels
         public string Name { get; set; }
         public string Description { get; set; }
         public string HowTo { get; set; }
+        public string Image { get; set; }
         public MenuType MenuType { get; set; }
         public List<MenuIngredient> Ingredients { get; set; }
     }

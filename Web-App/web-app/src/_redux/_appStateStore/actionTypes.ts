@@ -3,7 +3,8 @@ import { IMenu } from "../../_interfaces/IMenu"
 export enum AppStateActionTypes{
     'SETPAGETITLE' = 0,
     'SETPAGEURL' = 1,
-    'SETMENUCOLLECTION' = 2
+    'SETMENUCOLLECTION' = 2,
+    'SETMENU' = 3
 }
 
 export type Set_PageTitle = {
@@ -21,5 +22,10 @@ export type Set_Menu_Collection = {
     payload: IMenu[]
 }
 
-export type ActionType = Set_PageTitle | Set_PageUrl | Set_Menu_Collection
+export type Set_Menu = {
+    type: typeof AppStateActionTypes.SETMENU,
+    payload: IMenu
+}
+
+export type ActionType = Set_PageTitle | Set_PageUrl | Set_Menu_Collection | Set_Menu
 
