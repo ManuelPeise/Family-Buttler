@@ -1,4 +1,5 @@
 import { LocalStorageKeyEnum } from '../_enums/localStorageKeyEnum'
+import React from 'react'
 
 interface ILocalStorageResult<TItem>{
     setItem: (key: LocalStorageKeyEnum, value: string) => void
@@ -7,15 +8,15 @@ interface ILocalStorageResult<TItem>{
 
 const useLocalStorage = <TItem = any>(): ILocalStorageResult<TItem> =>{
 
-    const getItem = (key: LocalStorageKeyEnum): TItem => {
-        const item: TItem = JSON.parse(JSON.stringify(window.localStorage.getItem(LocalStorageKeyEnum[key])))
+    const getItem = React.useCallback((key: LocalStorageKeyEnum) => {
+        const item = window.localStorage.getItem(LocalStorageKeyEnum[key])
 
-        return item
-    }
+        return item ? (JSON.parse(item) as TItem) : {} as TItem
+    },[])
 
-    const setItem = (key: LocalStorageKeyEnum, value: string) =>{
+    const setItem = React.useCallback((key: LocalStorageKeyEnum, value: string) =>{
         window.localStorage.setItem(LocalStorageKeyEnum[key], value)
-    }
+    },[])
 
     const result: ILocalStorageResult<TItem> = {
         getItem,

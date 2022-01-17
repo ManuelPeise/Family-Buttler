@@ -1,5 +1,5 @@
 {
-    "baseUrl" : "https://familybuttler:443/api/",
+    "baseUrl" : "https://localhost:5001/api/",
     "baseUriBackup": "localhost:5001",
     "api-key": "",
     "i18nController" : "I18n/GetValues/",

@@ -9,4 +9,3 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessL
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Debug\net5.0\BusinessLogic.Data.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Debug\net5.0\ref\BusinessLogic.Data.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Debug\net5.0\BusinessLogic.Data.pdb
-D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\BusinessLogic.Data\obj\Debug\net5.0\BusinessLogic.Data.csproj.AssemblyReference.cache

@@ -89,3 +89,5 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\System.IO.Pipelines.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\BusinessLogic.Data.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\BusinessLogic.Data.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\i18n\landingpage\landingpageDe.json
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\bin\Debug\net5.0\i18n\landingpage\landingpageEn.json
