@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "hvjKB6Nc/xpn2eYH8LXadpDpE3V/eci4iOTTfIq1emHXD31SVQLD2s9pWyvyyNW8m7RwRBVb99WpKIa9pqLybg==",
+  "success": true,
+  "projectFilePath": "D:\\Development\\WorkFolder\\FamilyButtler\\Family-Buttler\\Backend\\Web-App\\Shared.Wrappers\\Shared.Wrappers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\manue\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.13\\microsoft.aspnetcore.http.features.5.0.13.nupkg.sha512",
+    "C:\\Users\\manue\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\manue\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

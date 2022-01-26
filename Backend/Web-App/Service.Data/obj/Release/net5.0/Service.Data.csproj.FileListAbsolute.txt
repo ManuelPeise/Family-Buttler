@@ -1,0 +1,17 @@
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\bin\Release\net5.0\Service.Data.deps.json
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\bin\Release\net5.0\Service.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\bin\Release\net5.0\ref\Service.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\bin\Release\net5.0\Service.Data.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\bin\Release\net5.0\Shared.Models.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\bin\Release\net5.0\Shared.Models.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\Service.Data.csproj.AssemblyReference.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\Service.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\Service.Data.AssemblyInfoInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\Service.Data.AssemblyInfo.cs
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\Service.Data.csproj.CoreCompileInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\Service.Data.csproj.CopyComplete
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\Service.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\ref\Service.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\obj\Release\net5.0\Service.Data.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\bin\Release\net5.0\BusinessLogic.Data.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Service.Data\bin\Release\net5.0\BusinessLogic.Data.pdb

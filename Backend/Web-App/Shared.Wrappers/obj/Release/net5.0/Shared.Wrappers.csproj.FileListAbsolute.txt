@@ -1,0 +1,15 @@
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\bin\Release\net5.0\Shared.Wrappers.deps.json
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\bin\Release\net5.0\Shared.Wrappers.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\bin\Release\net5.0\ref\Shared.Wrappers.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\bin\Release\net5.0\Shared.Wrappers.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\bin\Release\net5.0\Shared.Models.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\bin\Release\net5.0\Shared.Models.pdb
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\obj\Release\net5.0\Shared.Wrappers.csproj.AssemblyReference.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\obj\Release\net5.0\Shared.Wrappers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\obj\Release\net5.0\Shared.Wrappers.AssemblyInfoInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\obj\Release\net5.0\Shared.Wrappers.AssemblyInfo.cs
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\obj\Release\net5.0\Shared.Wrappers.csproj.CoreCompileInputs.cache
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\obj\Release\net5.0\Shared.Wrappers.csproj.CopyComplete
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\obj\Release\net5.0\Shared.Wrappers.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\obj\Release\net5.0\ref\Shared.Wrappers.dll
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Shared.Wrappers\obj\Release\net5.0\Shared.Wrappers.pdb
