@@ -75,8 +75,6 @@ namespace Web.Core
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Web.Core v1"));
 
-            // app.UseHttpsRedirection();
-
             app.UseStaticFiles();
 
             app.UseRouting();

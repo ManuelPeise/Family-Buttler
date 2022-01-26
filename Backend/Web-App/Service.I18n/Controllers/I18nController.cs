@@ -1,5 +1,8 @@
 ﻿using BusinessLogic.I18n;
 using Microsoft.AspNetCore.Mvc;
+using Shared.Models.Enums;
+using Shared.Models.Interfaces;
+using Shared.Models.Models;
 using System;
 using System.Threading.Tasks;
 
@@ -9,9 +12,10 @@ namespace Service.I18n.Controllers
     [Route("api/[controller]/[action]/")]
     public class I18nController: ControllerBase
     {
-        public I18nController()
+        private ILoggingRepository _logRepo
+        public I18nController(ILoggingRepository logRepo)
         {
-
+            _logRepo = logRepo;
         }
 
         [HttpGet("{nameSpace}", Name = "GetValues")]
@@ -23,9 +27,21 @@ namespace Service.I18n.Controllers
                 {
                     return await parser.ParseFile();
                 }
+
+                throw new Exception($"Loading values for language [{nameSpace.Replace("_", "/")}] failed!");
+
             }catch(Exception ex)
             {
-                return ex.Message;
+                await _logRepo.SetLogMessage(new LoggingMessage
+                {
+                    MessageType = LogMessageType.Critical,
+                    Message = "Could not load required values.",
+                    TimeStamp = DateTime.Now,
+                    Exception = ex.Message
+
+                });
+
+                return String.Empty;
             }
         }
 
