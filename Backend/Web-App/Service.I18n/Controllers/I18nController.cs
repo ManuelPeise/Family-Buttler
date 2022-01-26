@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.I18n;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 
 namespace Service.I18n.Controllers
@@ -16,9 +17,15 @@ namespace Service.I18n.Controllers
         [HttpGet("{nameSpace}", Name = "GetValues")]
         public async Task<string> GetValues(string nameSpace)
         {
-            using(var parser = new JsonValueParser(nameSpace))
+            try
             {
-                return await parser.ParseFile();
+                using (var parser = new JsonValueParser(nameSpace))
+                {
+                    return await parser.ParseFile();
+                }
+            }catch(Exception ex)
+            {
+                return ex.Message;
             }
         }
 

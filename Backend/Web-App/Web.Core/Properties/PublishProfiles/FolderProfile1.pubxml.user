@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>\\homeserver\media\publish</_PublishTargetUrl>
+    <History>True|2022-01-24T21:11:03.1522849Z;True|2022-01-23T22:38:26.8924907+01:00;True|2022-01-23T22:35:04.7079121+01:00;True|2022-01-23T22:17:09.3002401+01:00;True|2022-01-23T22:10:32.7779297+01:00;True|2022-01-23T21:50:27.1162380+01:00;True|2022-01-23T21:31:18.7069816+01:00;True|2022-01-23T21:25:23.5778685+01:00;True|2022-01-23T21:17:34.2407587+01:00;False|2022-01-23T21:16:36.6642132+01:00;True|2022-01-23T21:00:46.0158421+01:00;False|2022-01-23T20:59:17.1666636+01:00;False|2022-01-23T20:48:17.3080478+01:00;False|2022-01-23T20:47:40.7517575+01:00;True|2022-01-23T20:41:43.8751763+01:00;True|2022-01-23T20:36:28.8822937+01:00;True|2022-01-23T20:32:24.6492459+01:00;True|2022-01-23T19:48:14.1144940+01:00;True|2022-01-23T16:26:18.8136839+01:00;False|2022-01-23T16:12:10.3858347+01:00;False|2022-01-23T16:07:14.7935184+01:00;False|2022-01-23T15:25:07.2650650+01:00;False|2022-01-23T15:20:05.6702534+01:00;False|2022-01-23T15:19:16.8264438+01:00;False|2022-01-23T15:16:55.6832777+01:00;True|2022-01-23T14:59:26.0994648+01:00;True|2022-01-23T14:18:23.5864772+01:00;True|2022-01-23T13:43:08.1942093+01:00;True|2022-01-23T13:37:28.6074551+01:00;True|2022-01-23T13:35:30.7377029+01:00;False|2022-01-23T13:34:14.5289718+01:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="CookingBookContext">
+      <Value>Server=192.168.178.48%3bDatabase=DevLogContext%3bUser=admin%3bPassword=Celina-25032020</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="LogContext">
+      <Value>Server=192.168.178.48%3bDatabase=DevLogContext%3bUser=admin%3bPassword=Celina-25032020</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Data.CookingBookContext.CookingContext">
+      <Value>Server=192.168.178.48%3bDatabase=DevLogContext%3bUser=admin%3bPassword=Celina-25032020</Value>
+    </EFMigrations>
+    <EFMigrations Include="Data.LoggingContext.LogContext">
+      <Value>Server=192.168.178.48%3bDatabase=DevLogContext%3bUser=admin%3bPassword=Celina-25032020</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -3,7 +3,7 @@ using System;
 
 namespace Shared.Models.Models
 {
-    public class LogMessage
+    public class LoggingMessage
     {
         public int Id { get; set; }
         public DateTime TimeStamp { get; set; }

@@ -55,7 +55,7 @@ const useApi = <TItem>(options: IApiOptions) : IApiResult<TItem> => {
         }
         
         setIsloading(true)
-        await fetch(apiOptions.serviceUri, {method: 'GET', mode: 'cors'})
+        await fetch(apiOptions.serviceUri, {method: 'GET', mode: 'cors', headers: {"content-type":"application/json"}})
         .then(async (res) => {
 
             if(res.status === 200){

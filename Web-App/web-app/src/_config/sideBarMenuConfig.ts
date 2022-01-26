@@ -78,7 +78,7 @@ export const useSideBarMenuConfig = (handleClose: () => void) =>{
                     value: menuValues?.menuSubItemLogging,
                     selected: selectedSubMenu === menuValues?.menuSubItemLogging,
                     path: '/administration/logging',
-                    disabled: true,
+                    disabled: false,
                     pageTitle: 'Logging',
                     sortOrder: 0,
                     handleSelected: handleSelectSubMenu.bind(null, menuValues?.menuSubItemLogging, "Logging")

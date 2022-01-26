@@ -1,8 +1,12 @@
 {
-    "baseUrl" : "https://localhost:5001/api/",
+    "baseUrl" : "http://192.168.178.197:80/api/",
     "baseUriBackup": "localhost:5001",
     "api-key": "",
     "i18nController" : "I18n/GetValues/",
+    "administration" : {
+        "getLogmessages":"logging/getlogmessages",
+        "deleteLogmessages": "logging/deletelogmessages"
+    },
     "cookingBook":{
         "getMenuCollection" : "menu/getmenucollection",
         "addOrUpdateRecipe" : "menu/addorupdatemenu",
