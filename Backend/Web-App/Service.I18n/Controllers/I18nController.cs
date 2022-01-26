@@ -12,7 +12,7 @@ namespace Service.I18n.Controllers
     [Route("api/[controller]/[action]/")]
     public class I18nController: ControllerBase
     {
-        private ILoggingRepository _logRepo
+        private ILoggingRepository _logRepo;
         public I18nController(ILoggingRepository logRepo)
         {
             _logRepo = logRepo;
