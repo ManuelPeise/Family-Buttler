@@ -5,6 +5,8 @@ D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\i18n\app\appMenuEn.json
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\i18n\cookingbook\cookingbookDe.json
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\i18n\cookingbook\cookingbookEn.json
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\i18n\landingpage\landingpageDe.json
+D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\i18n\landingpage\landingpageEn.json
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Web.Core.dll
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Web.Core.runtimeconfig.json
 D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\Release\net5.0\PubTmp\Out\Web.Core.pdb

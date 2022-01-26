@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using BusinessLohic.Shared;
+using Data.LoggingContext.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLogic.Repositories
 {
@@ -23,7 +25,7 @@ namespace BusinessLogic.Repositories
 
         public async Task<List<LogMessageExportModel>> GetLogMessages()
         {
-            var messages = _logContext.LogMessages;
+            var messages = _logContext.LogMessages.Select(x => x).ToList();
 
             if (!messages.Any())
             {
@@ -34,16 +36,38 @@ namespace BusinessLogic.Repositories
                     select Mapper.GetExportLogMessage(msg)).ToList());
         }
 
-        public async Task SetLogMessage(LogMessage msg)
+        public async Task SetLogMessage(LoggingMessage msg)
         {
-            await _logContext.AddAsync(new LogMessage
+            try
             {
-                Message = msg.Message,
-                MessageType = msg.MessageType,
-                TimeStamp = msg.TimeStamp,
-                Exception = msg.Exception,
+                await _logContext.AddAsync(new LogMessage
+                {
+                    Message = msg.Message,
+                    MessageType = msg.MessageType,
+                    TimeStamp = msg.TimeStamp,
+                    Exception = msg.Exception,
 
-            });
+                });
+
+                await _logContext.SaveChangesAsync();
+            }catch(Exception ex)
+            {
+                var mmm = ex.Message;
+            }
+        }
+
+        public async Task DeleteLogMessages(int[] ids)
+        {
+            var messagesToDelete = _logContext.LogMessages.Where(msg => ids.Contains(msg.Id)).ToList();
+
+            foreach (var message in messagesToDelete)
+            {
+                _logContext.Entry(message).State = EntityState.Deleted;
+            }
+
+            _logContext.LogMessages.RemoveRange(messagesToDelete);
+
+            await _logContext.SaveChangesAsync();
         }
 
         #region dispose

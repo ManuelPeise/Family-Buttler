@@ -10,7 +10,7 @@ using Data.CookingBookContext;
 using Shared.Models.Interfaces;
 using BusinessLogic.Repositories;
 using Shared.Wrappers;
-using BusinessLogic.Shared;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace Web.Core
 {
@@ -59,38 +59,43 @@ namespace Web.Core
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-            public void Configure(IApplicationBuilder app, IWebHostEnvironment env, LogContext logContext, CookingContext cookingContext)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, LogContext logContext, CookingContext cookingContext)
+        {
+            if (env.IsDevelopment())
             {
-                if (env.IsDevelopment())
-                {
-                    app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();
 
-                }
-
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Web.Core v1"));
-
-                app.UseHttpsRedirection();
-
-                app.UseRouting();
-
-                app.UseCors(cornPolicy);
-
-                app.UseAuthorization();
-
-                app.UseEndpoints(endpoints =>
-                {
-                    endpoints.MapControllers();
-                });
-
-                var apiBaseUrl = Configuration.GetSection("ApiBaseUrl").Value;
-
-                var httpClientWrapper = new HttpClientWrapper();
-
-
-                httpClientWrapper.GetAsync(apiBaseUrl + "Maintanance/DbMigrationCheck");
-
-                httpClientWrapper.GetAsync(apiBaseUrl + "SeedCookingBookData/SeedMenuData");
             }
+
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Web.Core v1"));
+
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseCors(cornPolicy);
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+            var apiBaseUrl = Configuration.GetSection("ApiBaseUrl").Value;
+
+            var httpClientWrapper = new HttpClientWrapper();
+
+
+            httpClientWrapper.GetAsync(apiBaseUrl + "Maintanance/DbMigrationCheck");
+
+            httpClientWrapper.GetAsync(apiBaseUrl + "SeedCookingBookData/SeedMenuData");
         }
     }
+}

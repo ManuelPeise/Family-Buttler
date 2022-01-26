@@ -8,6 +8,7 @@ using Shared.Models.Enums;
 using Shared.Models.ExportModels;
 using Shared.Models.ImportModels;
 using Shared.Models.Interfaces;
+using Shared.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +19,12 @@ namespace BusinessLogic.Repositories
     public class CookingBookRepository : BusinessLogicBase, ICookingBookRepository
     { 
         private bool disposedValue;
+        private ILoggingRepository _logReopsitory;
 
-        public CookingBookRepository(LogContext logContext, CookingContext cookingContext) : base(logContext, cookingContext) { }
+        public CookingBookRepository(LogContext logContext, CookingContext cookingContext) : base(logContext, cookingContext) 
+        { 
+            _logReopsitory = new LoggingRepository(logContext);
+        }
 
         public async Task<MenuExportModel> GetMenus()
         {
@@ -54,13 +59,15 @@ namespace BusinessLogic.Repositories
             }
             catch (Exception ex)
             {
-                await LogContext.LogMessages.AddAsync(new LogMessage
+                await _logReopsitory.SetLogMessage(new LoggingMessage
                 {
                     Message = "Could not get Menu's from database!",
                     MessageType = LogMessageType.Error,
                     Exception = ex.Message,
                     TimeStamp = DateTime.Now,
+
                 });
+                
 
                 return await Task.FromResult(new MenuExportModel
                 {
@@ -116,7 +123,7 @@ namespace BusinessLogic.Repositories
             }
             catch (Exception ex)
             {
-                LogContext.LogMessages.Add(new LogMessage
+                await _logReopsitory.SetLogMessage(new LoggingMessage
                 {
                     Message = "Could not add or update menu!",
                     MessageType = LogMessageType.Error,
@@ -144,7 +151,7 @@ namespace BusinessLogic.Repositories
             }
             catch (Exception ex)
             {
-                LogContext.LogMessages.Add(new LogMessage
+                await _logReopsitory.SetLogMessage(new LoggingMessage
                 {
                     Message = "Could not delete menu!",
                     MessageType = LogMessageType.Error,

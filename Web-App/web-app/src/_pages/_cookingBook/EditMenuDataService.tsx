@@ -7,6 +7,9 @@ import { useDispatch } from 'react-redux'
 import MenuLayout from './MenuLayout'
 import { IMenuLayoutConfig } from './interfaces/IMenueLayoutConfig'
 import { ICookingBookValues } from '../../_interfaces/ICookingBookValues'
+import useLocalStorage from '../../_hooks/useLocalStorage'
+import { IButtlerConfiguration } from '../../_interfaces/IButtlerConfiguration'
+import { LocalStorageKeyEnum } from '../../_enums/localStorageKeyEnum'
 
 
 const EditMenuDataService: React.FC= () =>{
@@ -14,8 +17,13 @@ const EditMenuDataService: React.FC= () =>{
     const dispatch = useDispatch();
 
     const menuDataService = useApi<IMenuResponse>({serviceUri: apiConfig.baseUrl + apiConfig.cookingBook.getMenuCollection, params: null})
-    
-    const valueDataService = useApi<ICookingBookValues>({serviceUri: apiConfig.baseUrl + apiConfig.i18nController + "cookingbook_cookingbookEn", params: null}) 
+    const localStorageService = useLocalStorage<IButtlerConfiguration>();
+
+    const valuesUrlPrefix = React.useMemo(() =>{
+        return `cookingbook_cookingbook${localStorageService.getItem(LocalStorageKeyEnum.buttlerConfiguration).language?? 'En'}`
+    },[localStorageService])
+
+    const valueDataService = useApi<ICookingBookValues>({serviceUri: apiConfig.baseUrl + apiConfig.i18nController + valuesUrlPrefix, params: null}) 
     
     const saveOrUpdateRecipe = React.useCallback(async (menu: IMenu) =>{
         await menuDataService.post({serviceUri: apiConfig.baseUrl + apiConfig.cookingBook.addOrUpdateRecipe, method: 'POST', params: menu})

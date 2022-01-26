@@ -9,6 +9,8 @@ namespace Shared.Models.Interfaces
     public interface ILoggingRepository: IDisposable
     {
         Task<List<LogMessageExportModel>> GetLogMessages();
-        Task SetLogMessage(LogMessage msg);
+        Task SetLogMessage(LoggingMessage msg);
+
+        Task DeleteLogMessages(int[] ids);
     }
 }

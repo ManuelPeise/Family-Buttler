@@ -1,5 +1,6 @@
 import { IAppState } from "../../_interfaces/IAppState";
 import { IMenu } from "../../_interfaces/IMenu";
+import { ILogmessage } from "../../_pages/_administartion/_logging/interfaces/ILogmessage";
 import { ActionType, AppStateActionTypes } from "./actionTypes";
 
 export const SetPageTitle = (title: string): ActionType => {
@@ -37,10 +38,18 @@ export const SetOriginalMenu = (menu: IMenu): ActionType =>{
     }
 }
 
+export const SetLogMessages = (messages: ILogmessage[]) =>{
+    return{
+        type: AppStateActionTypes.SETLOGMESSAGES,
+        payload: messages
+    }
+}
+
 export const mapStateToProps = (state: IAppState): IAppState =>{
     return{
         pageTitle: state.pageTitle,
         url: state.url,
-       cookingBook: state.cookingBook
+        cookingBook: state.cookingBook,
+        logMessages: state.logMessages
     }
 }
