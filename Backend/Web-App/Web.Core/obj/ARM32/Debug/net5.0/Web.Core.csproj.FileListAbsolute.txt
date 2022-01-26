@@ -1,7 +1,0 @@
-D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\ARM32\Debug\net5.0\Web.Core.csproj.AssemblyReference.cache
-D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\ARM32\Debug\net5.0\Web.Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\ARM32\Debug\net5.0\Web.Core.AssemblyInfoInputs.cache
-D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\ARM32\Debug\net5.0\Web.Core.AssemblyInfo.cs
-D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\ARM32\Debug\net5.0\Web.Core.csproj.CoreCompileInputs.cache
-D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\ARM32\Debug\net5.0\Web.Core.MvcApplicationPartsAssemblyInfo.cs
-D:\Development\WorkFolder\FamilyButtler\Family-Buttler\Backend\Web-App\Web.Core\obj\ARM32\Debug\net5.0\Web.Core.MvcApplicationPartsAssemblyInfo.cache
