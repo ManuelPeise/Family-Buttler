@@ -5,8 +5,9 @@
 
 # User-specific files
 *.rsuser
-Backend/Web-App/**/Web-App/**
+/Backend/Web-App/.vs/**
 Backend/Web-App/**/*.suo
+**/.suo
 Backend/Web-App/**/*.user
 *.userosscache
 *.sln.docstates
@@ -362,3 +363,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Backend/Web-App/.vs/Web-App/v17/.suo
