@@ -9,10 +9,10 @@ namespace BusinessLogic.Shared
     public class DataBaseMaintanance: IDisposable
     {
         private LogContext _logContext;
-        private CookingContext _cookingContext;
+        private Data.CookingBookContext.AppContext _cookingContext;
         private bool disposedValue;
 
-        public DataBaseMaintanance(LogContext logContext, CookingContext cookingBookContext)
+        public DataBaseMaintanance(LogContext logContext, Data.CookingBookContext.AppContext cookingBookContext)
         {
             _logContext = logContext;
             _cookingContext = cookingBookContext;

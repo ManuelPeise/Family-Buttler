@@ -11,9 +11,9 @@ namespace Service.Administration.Controllers
     public class MaintananceController: ControllerBase
     {
         private LogContext _logContext;
-        private CookingContext _cookingContext;
+        private AppContext _cookingContext;
 
-        public MaintananceController(LogContext logContext, CookingContext cookingContext)
+        public MaintananceController(LogContext logContext, AppContext cookingContext)
         {
             _logContext = logContext;
             _cookingContext = cookingContext;

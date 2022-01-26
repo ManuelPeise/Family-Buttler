@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Data.CookingBookContext.Migrations
 {
-    [DbContext(typeof(CookingContext))]
+    [DbContext(typeof(AppContext))]
     partial class CookingContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

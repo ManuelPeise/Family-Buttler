@@ -21,7 +21,7 @@ namespace BusinessLogic.Repositories
         private bool disposedValue;
         private ILoggingRepository _logReopsitory;
 
-        public CookingBookRepository(LogContext logContext, CookingContext cookingContext) : base(logContext, cookingContext) 
+        public CookingBookRepository(LogContext logContext, Data.CookingBookContext.AppContext cookingContext) : base(logContext, cookingContext) 
         { 
             _logReopsitory = new LoggingRepository(logContext);
         }

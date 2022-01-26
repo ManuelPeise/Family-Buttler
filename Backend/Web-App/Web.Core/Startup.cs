@@ -39,9 +39,9 @@ namespace Web.Core
                 opt.UseMySQL(Configuration.GetConnectionString("LogContext"));
             });
 
-            services.AddDbContext<CookingContext>(opt =>
+            services.AddDbContext<AppContext>(opt =>
             {
-                opt.UseMySQL(Configuration.GetConnectionString("CookingBookContext"));
+                opt.UseMySQL(Configuration.GetConnectionString("AppContext"));
             });
 
             services.AddScoped<ILoggingRepository, LoggingRepository>();
@@ -59,7 +59,7 @@ namespace Web.Core
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, LogContext logContext, CookingContext cookingContext)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, LogContext logContext, AppContext cookingContext)
         {
             if (env.IsDevelopment())
             {

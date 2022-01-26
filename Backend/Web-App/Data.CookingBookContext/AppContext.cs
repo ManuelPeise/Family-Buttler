@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.CookingBookContext
 {
-    public class CookingContext: DbContext
+    public class AppContext: DbContext
     {
-        public CookingContext(DbContextOptions<CookingContext> options) : base(options)
+        public AppContext(DbContextOptions<AppContext> options) : base(options)
         {
 
         }

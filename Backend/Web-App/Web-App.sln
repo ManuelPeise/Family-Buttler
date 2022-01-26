@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-Data", "04-Data", "{D4F0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-Shared", "05-Shared", "{D2D9AE60-7713-4A68-B4B2-C9FD71FFCEA4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.CookingBookContext", "Data.CookingBookContext\Data.CookingBookContext.csproj", "{97342AA3-303F-4BE1-93ED-01F2A97B35B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.ApplicationContext", "Data.CookingBookContext\Data.ApplicationContext.csproj", "{97342AA3-303F-4BE1-93ED-01F2A97B35B8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.LoggingContext", "Data.LoggingContext\Data.LoggingContext.csproj", "{FB8D07E1-E939-4932-B8A2-0B8C39393BA5}"
 EndProject

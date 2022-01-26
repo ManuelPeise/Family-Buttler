@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Data.CookingBookContext.Migrations
 {
-    [DbContext(typeof(CookingContext))]
+    [DbContext(typeof(AppContext))]
     [Migration("20220110212343_add-image")]
     partial class addimage
     {

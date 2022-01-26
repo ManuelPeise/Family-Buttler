@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Data.CookingBookContext\Data.CookingBookContext.csproj" />
+    <ProjectReference Include="..\Data.CookingBookContext\Data.ApplicationContext.csproj" />
     <ProjectReference Include="..\Data.LoggingContext\Data.LoggingContext.csproj" />
   </ItemGroup>
 
