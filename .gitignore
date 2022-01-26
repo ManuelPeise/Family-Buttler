@@ -5,6 +5,7 @@
 
 # User-specific files
 *.rsuser
+Backend/Web-App/.vs/*
 Backend/Web-App/**/*.suo
 Backend/Web-App/**/*.user
 *.userosscache
