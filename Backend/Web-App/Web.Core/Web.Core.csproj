@@ -24,12 +24,13 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic.Repositories\BusinessLogic.Repositories.csproj" />
-    <ProjectReference Include="..\Data.CookingBookContext\Data.ApplicationContext.csproj" />
+    <ProjectReference Include="..\Data.ApplicationContext\Data.ApplicationContext.csproj" />
     <ProjectReference Include="..\Data.LoggingContext\Data.LoggingContext.csproj" />
     <ProjectReference Include="..\Service.Administration\Service.Administration.csproj" />
     <ProjectReference Include="..\Service.CookingBook\Service.CookingBook.csproj" />
     <ProjectReference Include="..\Service.Data\Service.Data.csproj" />
     <ProjectReference Include="..\Service.I18n\Service.I18n.csproj" />
+    <ProjectReference Include="..\Service.Menuplan\Service.MenuplanService.csproj" />
     <ProjectReference Include="..\Shared.Wrappers\Shared.Wrappers.csproj" />
   </ItemGroup>
 

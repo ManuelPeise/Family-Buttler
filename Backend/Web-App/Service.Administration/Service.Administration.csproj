@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessLohic.Shared\BusinessLogic.Shared.csproj" />
-    <ProjectReference Include="..\Data.CookingBookContext\Data.ApplicationContext.csproj" />
     <ProjectReference Include="..\Data.LoggingContext\Data.LoggingContext.csproj" />
     <ProjectReference Include="..\Shared.Models\Shared.Models.csproj" />
   </ItemGroup>

@@ -2,11 +2,11 @@
 using Data.CookingBookContext.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Data.CookingBookContext
+namespace Data.ApplicationContext
 {
-    public class AppContext: DbContext
+    public class AppDataContext: DbContext
     {
-        public AppContext(DbContextOptions<AppContext> options) : base(options)
+        public AppDataContext(DbContextOptions<AppDataContext> options) : base(options)
         {
 
         }

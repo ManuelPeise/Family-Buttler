@@ -1,5 +1,5 @@
 ﻿using BusinessLohic.Shared;
-using Data.CookingBookContext;
+using Data.ApplicationContext;
 using Data.CookingBookContext.Entities;
 using Data.LoggingContext;
 using Data.LoggingContext.Entities;
@@ -21,7 +21,7 @@ namespace BusinessLogic.Repositories
         private bool disposedValue;
         private ILoggingRepository _logReopsitory;
 
-        public CookingBookRepository(LogContext logContext, Data.CookingBookContext.AppContext cookingContext) : base(logContext, cookingContext) 
+        public CookingBookRepository(LogContext logContext, AppDataContext appDataContext) : base(logContext, appDataContext) 
         { 
             _logReopsitory = new LoggingRepository(logContext);
         }
@@ -30,8 +30,8 @@ namespace BusinessLogic.Repositories
         {
             try
             {
-                var menuCollection = (from menu in CookingContext.Menus
-                                      let ingredients = CookingContext.MenuIngredients.Where(m => m.MenuId == menu.Id).ToList()
+                var menuCollection = (from menu in AppDataContext.Menus
+                                      let ingredients = AppDataContext.MenuIngredients.Where(m => m.MenuId == menu.Id).ToList()
                                       select new ExportMenu
                                       {
                                           Id = menu.Id,
@@ -44,7 +44,7 @@ namespace BusinessLogic.Repositories
                                                          select new MenuIngredient
                                                          {
                                                              Id = i.Id,
-                                                             Name = CookingContext.Ingredients.Single(x => x.Id == i.Id).Name,
+                                                             Name = AppDataContext.Ingredients.Single(x => x.Id == i.Id).Name,
                                                              Amount = i.Amount,
                                                              Unit = i.Unit
                                                          }).ToList()
@@ -86,7 +86,7 @@ namespace BusinessLogic.Repositories
         {
             try
             {
-                var existingMenu = CookingContext.Menus.FirstOrDefault(menu => menu.Name.Equals(importModel.Name));
+                var existingMenu = AppDataContext.Menus.FirstOrDefault(menu => menu.Name.Equals(importModel.Name));
 
                 await TryAddIngredients(importModel.Ingredients);
 
@@ -109,14 +109,14 @@ namespace BusinessLogic.Repositories
                     
                 };
 
-                CookingContext.Menus.Add(newMenu);
-                CookingContext.Entry(newMenu).State = EntityState.Added;
+                AppDataContext.Menus.Add(newMenu);
+                AppDataContext.Entry(newMenu).State = EntityState.Added;
 
-                await CookingContext.SaveChangesAsync();
+                await AppDataContext.SaveChangesAsync();
 
-                var maxMenuId = CookingContext.Menus.Max(x => x.Id);
+                var maxMenuId = AppDataContext.Menus.Max(x => x.Id);
 
-                var menuId = CookingContext.Menus.FirstOrDefault(menu => menu.Id == maxMenuId);
+                var menuId = AppDataContext.Menus.FirstOrDefault(menu => menu.Id == maxMenuId);
 
                 await TryAddOrUpdateMenuIngredients(importModel, maxMenuId);
 
@@ -137,17 +137,17 @@ namespace BusinessLogic.Repositories
         {
             try
             {
-                var menuIngredients = CookingContext.MenuIngredients.Where(x => x.MenuId == id).ToList();
+                var menuIngredients = AppDataContext.MenuIngredients.Where(x => x.MenuId == id).ToList();
 
 
                 foreach (var ingredient in menuIngredients)
                 {
-                    CookingContext.Entry(ingredient).State = EntityState.Deleted;
+                    AppDataContext.Entry(ingredient).State = EntityState.Deleted;
                 }
 
-                CookingContext.MenuIngredients.RemoveRange(menuIngredients);
+                AppDataContext.MenuIngredients.RemoveRange(menuIngredients);
 
-                await CookingContext.SaveChangesAsync();
+                await AppDataContext.SaveChangesAsync();
             }
             catch (Exception ex)
             {
@@ -184,7 +184,7 @@ namespace BusinessLogic.Repositories
         {
             foreach (var ingredient in menueIngredients)
             {
-                var existing = CookingContext.Ingredients.FirstOrDefault(ing => ing.Name.Equals(ingredient.Name) && ing.Type == ingredient.Type);
+                var existing = AppDataContext.Ingredients.FirstOrDefault(ing => ing.Name.Equals(ingredient.Name) && ing.Type == ingredient.Type);
 
                 if (existing != null)
                 {
@@ -197,21 +197,21 @@ namespace BusinessLogic.Repositories
                     Type = ingredient.Type,
                 };
 
-                CookingContext.Entry(newIngredient).State = EntityState.Added;
+                AppDataContext.Entry(newIngredient).State = EntityState.Added;
 
-                CookingContext.Ingredients.Add(newIngredient);
+                AppDataContext.Ingredients.Add(newIngredient);
             }
 
-            await CookingContext.SaveChangesAsync();
+            await AppDataContext.SaveChangesAsync();
         }
 
         private async Task TryAddOrUpdateMenuIngredients(MenuImportModel importModel, int menuId)
         {
             foreach (var ingredient in importModel.Ingredients)
             {
-                var ingredientId = CookingContext.Ingredients.FirstOrDefault(ing => ing.Name.Equals(ingredient.Name)).Id;
+                var ingredientId = AppDataContext.Ingredients.FirstOrDefault(ing => ing.Name.Equals(ingredient.Name)).Id;
 
-                var existing = CookingContext.MenuIngredients.FirstOrDefault(x => x.MenuId == menuId && x.IngredientId == ingredientId);
+                var existing = AppDataContext.MenuIngredients.FirstOrDefault(x => x.MenuId == menuId && x.IngredientId == ingredientId);
 
                 if (existing == null)
                 {
@@ -220,12 +220,12 @@ namespace BusinessLogic.Repositories
                         Amount = ingredient.Amount,
                         Unit = ingredient.Unit,
                         MenuId = menuId,
-                        IngredientId = CookingContext.Ingredients.Single(ing => ing.Name.Equals(ingredient.Name)).Id,
+                        IngredientId = AppDataContext.Ingredients.Single(ing => ing.Name.Equals(ingredient.Name)).Id,
                     };
 
-                    CookingContext.MenuIngredients.Add(newIngrdient);
+                    AppDataContext.MenuIngredients.Add(newIngrdient);
 
-                    CookingContext.Entry(newIngrdient).State = EntityState.Added;
+                    AppDataContext.Entry(newIngrdient).State = EntityState.Added;
 
                     continue;
                 }
@@ -235,11 +235,11 @@ namespace BusinessLogic.Repositories
                 existing.Amount = ingredient.Amount;
                 existing.IngredientId = ingredientId;
 
-                CookingContext.Entry(existing).State = EntityState.Modified;
-                CookingContext.MenuIngredients.Update(existing);
+                AppDataContext.Entry(existing).State = EntityState.Modified;
+                AppDataContext.MenuIngredients.Update(existing);
             }
 
-            await CookingContext.SaveChangesAsync();
+            await AppDataContext.SaveChangesAsync();
         }
 
         private async Task UpdateMenu(Menu existingMenu, MenuImportModel importModel)
@@ -249,11 +249,11 @@ namespace BusinessLogic.Repositories
             existingMenu.HowTo = importModel.HowTo;
             existingMenu.Type = importModel.MenuType;
 
-            CookingContext.Entry(existingMenu).State = EntityState.Modified;
+            AppDataContext.Entry(existingMenu).State = EntityState.Modified;
 
-            CookingContext.Menus.Update(existingMenu);
+            AppDataContext.Menus.Update(existingMenu);
 
-            await CookingContext.SaveChangesAsync();
+            await AppDataContext.SaveChangesAsync();
         }
 
         private async Task AddTestMenu()
@@ -306,7 +306,7 @@ namespace BusinessLogic.Repositories
             {
                 if (disposing)
                 {
-                    this.CookingContext.Dispose();
+                    this.AppDataContext.Dispose();
                 }
 
                 disposedValue = true;

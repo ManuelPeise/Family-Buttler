@@ -1,4 +1,4 @@
-﻿using Data.CookingBookContext;
+﻿using Data.ApplicationContext;
 using Data.LoggingContext;
 
 namespace BusinessLohic.Shared
@@ -6,7 +6,7 @@ namespace BusinessLohic.Shared
     public abstract class BusinessLogicBase
     {
         public LogContext LogContext { get; set; }
-        public AppContext CookingContext { get; set; }
+        public AppDataContext AppDataContext { get; set; }
         
         public BusinessLogicBase()
         {
@@ -18,10 +18,10 @@ namespace BusinessLohic.Shared
             LogContext = logContext;
         }
 
-        public BusinessLogicBase(LogContext logContext, AppContext cookingContext): base()
+        public BusinessLogicBase(LogContext logContext, AppDataContext appDataContext): base()
         {
             LogContext = logContext;
-            CookingContext = cookingContext;
+            AppDataContext = appDataContext;
         }
     }
 }

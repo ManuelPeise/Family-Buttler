@@ -6,11 +6,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Data.CookingBookContext;
 using Shared.Models.Interfaces;
 using BusinessLogic.Repositories;
 using Shared.Wrappers;
 using Microsoft.AspNetCore.HttpOverrides;
+using Data.ApplicationContext;
 
 namespace Web.Core
 {
@@ -39,13 +39,14 @@ namespace Web.Core
                 opt.UseMySQL(Configuration.GetConnectionString("LogContext"));
             });
 
-            services.AddDbContext<AppContext>(opt =>
+            services.AddDbContext<AppDataContext>(opt =>
             {
-                opt.UseMySQL(Configuration.GetConnectionString("AppContext"));
+                opt.UseMySQL(Configuration.GetConnectionString("AppDataContext"));
             });
 
             services.AddScoped<ILoggingRepository, LoggingRepository>();
             services.AddScoped<ICookingBookRepository, CookingBookRepository>();
+            services.AddScoped<IMenuPlanReopsitory, MenuPlanRepository>();
 
             services.AddCors(opt =>
             {
@@ -59,7 +60,7 @@ namespace Web.Core
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, LogContext logContext, AppContext cookingContext)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, LogContext logContext, AppDataContext cookingContext)
         {
             if (env.IsDevelopment())
             {

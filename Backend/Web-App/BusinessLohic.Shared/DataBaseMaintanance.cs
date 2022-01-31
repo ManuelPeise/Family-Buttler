@@ -1,4 +1,4 @@
-﻿using Data.CookingBookContext;
+﻿using Data.ApplicationContext;
 using Data.LoggingContext;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,10 +9,10 @@ namespace BusinessLogic.Shared
     public class DataBaseMaintanance: IDisposable
     {
         private LogContext _logContext;
-        private Data.CookingBookContext.AppContext _cookingContext;
+        private Data.ApplicationContext.AppDataContext _cookingContext;
         private bool disposedValue;
 
-        public DataBaseMaintanance(LogContext logContext, Data.CookingBookContext.AppContext cookingBookContext)
+        public DataBaseMaintanance(LogContext logContext, AppDataContext cookingBookContext)
         {
             _logContext = logContext;
             _cookingContext = cookingBookContext;

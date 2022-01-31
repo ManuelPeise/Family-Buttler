@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.Shared;
+using Data.ApplicationContext;
 using Data.CookingBookContext;
 using Data.LoggingContext;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +12,9 @@ namespace Service.Administration.Controllers
     public class MaintananceController: ControllerBase
     {
         private LogContext _logContext;
-        private AppContext _cookingContext;
+        private AppDataContext _cookingContext;
 
-        public MaintananceController(LogContext logContext, AppContext cookingContext)
+        public MaintananceController(LogContext logContext, AppDataContext cookingContext)
         {
             _logContext = logContext;
             _cookingContext = cookingContext;
